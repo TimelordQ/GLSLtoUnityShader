@@ -6,4 +6,8 @@
     <UseWindowsForms>true</UseWindowsForms>
   </PropertyGroup>
 
+  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+    <Exec Command="copy &quot;$(SolutionDir)\txtBaseTemplateShader.txt&quot; &quot;$(TargetDir)&quot;&#xD;&#xA;copy &quot;$(SolutionDir)\txtBeginning.txt&quot; &quot;$(TargetDir)&quot;&#xD;&#xA;copy &quot;$(SolutionDir)\txtEnding.txt&quot; &quot;$(TargetDir)&quot;&#xD;&#xA;" />
+  </Target>
+
 </Project>
